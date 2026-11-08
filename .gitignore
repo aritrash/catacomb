@@ -1,0 +1,21 @@
+# Build artifacts
+build/
+*.o
+*.a
+*.so
+*.elf
+*.iso
+*.img
+*.bin
+!boot/limine/*.bin
+*.map
+*.log
+
+# Generated files
+compile_commands.json
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*~
