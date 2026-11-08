@@ -13,6 +13,8 @@ set(KERNEL_SOURCES
     kernel/arch/x86_64/limine_requests.cpp
     kernel/arch/x86_64/serial.cpp
     kernel/core/kernel.cpp
+    kernel/core/log.cpp
+    kernel/core/panic.cpp
 )
 
 add_executable(catacomb ${KERNEL_SOURCES})

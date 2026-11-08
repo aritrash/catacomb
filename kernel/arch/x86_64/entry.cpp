@@ -1,7 +1,9 @@
+#include <catacomb/arch/x86_64/cpu.hpp>
+
 extern "C" void catacomb_kernel_main();
 
 extern "C" [[noreturn]] void _start() {
-    asm volatile("cli");
+    catacomb::arch::x86_64::cpu::disable_interrupts();
     catacomb_kernel_main();
-    for (;;) asm volatile("hlt");
+    catacomb::arch::x86_64::cpu::halt_forever();
 }
